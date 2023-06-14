@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainOneFragment">
+
+    <fragment
+        android:id="@+id/mainOneFragment"
+        android:name="com.iamauttamai.navcontroller.mainnav.MainOneFragment"
+        android:label="fragment_main_one"
+        tools:layout="@layout/fragment_main_one" >
+        <action
+            android:id="@+id/action_mainOneFragment_to_mainTwoFragment"
+            app:destination="@id/mainTwoFragment" />
+        <action
+            android:id="@+id/action_mainOneFragment_to_mainThreeFragment"
+            app:destination="@id/mainThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainTwoFragment"
+        android:name="com.iamauttamai.navcontroller.mainnav.MainTwoFragment"
+        android:label="fragment_main_two"
+        tools:layout="@layout/fragment_main_two" >
+        <action
+            android:id="@+id/action_mainTwoFragment_to_mainOneFragment"
+            app:destination="@id/mainOneFragment" />
+        <action
+            android:id="@+id/action_mainTwoFragment_to_mainThreeFragment"
+            app:destination="@id/mainThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainThreeFragment"
+        android:name="com.iamauttamai.navcontroller.mainnav.MainThreeFragment"
+        android:label="fragment_main_three"
+        tools:layout="@layout/fragment_main_three" >
+        <action
+            android:id="@+id/action_mainThreeFragment_to_mainOneFragment"
+            app:destination="@id/mainOneFragment" />
+        <action
+            android:id="@+id/action_mainThreeFragment_to_mainTwoFragment"
+            app:destination="@id/mainTwoFragment" />
+    </fragment>
+</navigation>
